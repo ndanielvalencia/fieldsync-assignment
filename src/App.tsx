@@ -1,23 +1,35 @@
-import React, {useState} from 'react';
-import { createBrowserRouter, RouterProvider} from 'react-router-dom';
-import './App.css';
+import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import ErrorPage from './error-page';
+import LayoutComponent from './LayoutComponent';
+import HomePage from './routes/HomePage';
+import Save from './routes/Save';
+import Fetch from './routes/Fetch';
+
+
+const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <LayoutComponent/>,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+            index: true,
+            element: <HomePage />,
+        },
+        {
+          path: "save",
+          element: <Save />,
+        },
+        {
+          path: "fetch",
+          element: <Fetch />,
+        },
+      ]
+    },
+  ]);
 
 export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RouterProvider router={router} />
   );
 }

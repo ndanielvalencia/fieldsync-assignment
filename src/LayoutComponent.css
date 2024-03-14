@@ -1,0 +1,28 @@
+.navbar {
+    background-color: #333; 
+    padding: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link {
+    color: white; 
+    text-decoration: none;
+    padding: 5px 10px; 
+    border-radius: 5px;
+}
+
+.vertical-bar {
+    color: white; 
+    margin: 0 5px; 
+}
+
+.nav-link:hover {
+    background-color: #555;
+}
+
+.active {
+    color: green; 
+    font-weight: bold;
+}
