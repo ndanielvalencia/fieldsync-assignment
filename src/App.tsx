@@ -4,6 +4,8 @@ import LayoutComponent from './LayoutComponent';
 import HomePage from './routes/HomePage';
 import Save from './routes/Save';
 import Fetch from './routes/Fetch';
+import store from './redux/store';
+import { Provider } from 'react-redux';
 
 
 const router = createBrowserRouter([
@@ -30,6 +32,8 @@ const router = createBrowserRouter([
 
 export default function App() {
   return (
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   );
 }
