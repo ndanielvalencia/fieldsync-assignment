@@ -47,6 +47,7 @@ export default function HomePage() {
           <table>
             <thead>
               <tr>
+                <th>id </th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
@@ -54,8 +55,10 @@ export default function HomePage() {
               </tr>
             </thead>
             <tbody>
-              {(externalUsers as ExternalUser[]).map((user: ExternalUser) => (
+              {(externalUsers as ExternalUser[])
+              .map((user: ExternalUser) => (
                 <tr key={user.id}>
+                  <td>{user.id}</td>
                   <td>{user.name}</td>
                   <td>{user.email}</td>
                   <td>{user.phone}</td>

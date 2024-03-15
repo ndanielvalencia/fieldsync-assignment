@@ -48,6 +48,7 @@ export default function FetchPage() {
                 <table>
                   <thead>
                     <tr>
+                      <th>id </th>
                       <th>Name</th>
                       <th>Email</th>
                       <th>Phone</th>
@@ -55,8 +56,10 @@ export default function FetchPage() {
                     </tr>
                   </thead>
                   <tbody>
-                    {(internalUsers as InternalUser[]).map((user: InternalUser) => (
+                    {(internalUsers as InternalUser[])
+                    .map((user: InternalUser) => (
                       <tr key={user.id}>
+                        <td>{user.id}</td>
                         <td>{user.name}</td>
                         <td>{user.email}</td>
                         <td>{user.phone}</td>
