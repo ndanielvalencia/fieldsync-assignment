@@ -2,7 +2,7 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import ErrorPage from './error-page';
 import LayoutComponent from './LayoutComponent';
 import HomePage from './routes/HomePage';
-import Save from './routes/Save';
+import SavePage from './routes/SavePage';
 import Fetch from './routes/Fetch';
 import store from './redux/store';
 import { Provider } from 'react-redux';
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
         },
         {
           path: "save",
-          element: <Save />,
+          element: <SavePage />,
         },
         {
           path: "fetch",

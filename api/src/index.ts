@@ -1,9 +1,10 @@
 
 
 import express, { Application } from "express";
-import cors, { CorsOptions } from "cors";
+import cors from "cors";
 import Routes from "./routes";
 import Database from "./db";
+
 
 
 export default class Server {
@@ -14,13 +15,15 @@ export default class Server {
   }
 
   private config(app: Application): void {
-    const corsOptions: CorsOptions = {
-      origin: "http://localhost:8080"
-    };
-
-    app.use(cors(corsOptions));
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
+    app.use(cors());
+    app.use(function(req, res, next) {
+      res.header("Access-Control-Allow-Origin", "*");
+      res.header("Access-Control-Allow-Methods", "GET, PUT, POST");
+      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+      next();
+    });
   }
 
   private syncDatabase(): void {
