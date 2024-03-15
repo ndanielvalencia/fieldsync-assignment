@@ -8,7 +8,7 @@ export default function LayoutComponent() {
     return (
         <div>
             <header className="navbar">
-                <Link to="/" className={`nav-link ${location.pathname === '/' && 'active'}`}>Root</Link>
+                <Link to="/" className={`nav-link ${location.pathname === '/' && 'active'}`}>Home</Link>
                 <span className="vertical-bar">|</span>
                 <Link to="/save" className={`nav-link ${location.pathname === '/save' && 'active'}`}>Save</Link>
                 <span className="vertical-bar">|</span>

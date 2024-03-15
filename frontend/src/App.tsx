@@ -3,7 +3,7 @@ import ErrorPage from './error-page';
 import LayoutComponent from './LayoutComponent';
 import HomePage from './routes/HomePage';
 import SavePage from './routes/SavePage';
-import Fetch from './routes/Fetch';
+import FetchPage from './routes/FetchPage';
 import store from './redux/store';
 import { Provider } from 'react-redux';
 
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
         },
         {
           path: "fetch",
-          element: <Fetch />,
+          element: <FetchPage />,
         },
       ]
     },
