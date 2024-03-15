@@ -1,10 +1,10 @@
 require('dotenv').config();
 
 export const config = {
-  HOST: "localhost",
+  HOST: process.env.DB_HOST,
   USER: process.env.DB_USER,
   PASSWORD: process.env.DB_PASSWORD,
-  DB: "users",
+  DB: process.env.DB_NAME,
   pool: {
     max: 5,
     min: 0,

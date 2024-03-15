@@ -1,5 +1,5 @@
 {
-  "name": "typescript-orm-postgres",
+  "name": "api",
   "version": "0.1.0",
   "main": "server.ts",
   "scripts": {

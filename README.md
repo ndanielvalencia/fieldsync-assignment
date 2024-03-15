@@ -24,6 +24,12 @@ $ sudo passwd postgres
 
 More info found [here](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs)
 
+-Docker, which can be installed as:
+```bash
+$ sudo passwd postgres
+```
+
+
 If on a Windows platform, run in WSL. Installation instructions found [here](https://learn.microsoft.com/en-us/windows/wsl/install). Additional instructions on how to install Node.js in WSL can be found [here](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wslhttps://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl)
 
 
