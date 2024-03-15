@@ -23,7 +23,7 @@ export default function SavePage() {
             return;
         } 
         
-        (externalUsers as ExternalUser[]).map((user: ExternalUser) => {
+        (externalUsers as ExternalUser[]).forEach((user: ExternalUser) => {
             dispatch(postUser(user));
         });
     };
@@ -49,7 +49,7 @@ export default function SavePage() {
         );
       }
     return (
-        <div>
+        <div className = "content-container">
             <h1>Save</h1>
             <p>Click the button to save the users to the server.</p>
             <button onClick={handleSubmit} disabled={isPosted || (error != null)}>Save</button>

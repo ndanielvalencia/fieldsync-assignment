@@ -44,8 +44,8 @@ export default function FetchPage() {
             );
         } else {
             content = (
-                <div className="user-table">
-                <table>
+                <div>
+                <table className="table-container">
                   <thead>
                     <tr>
                       <th>id </th>
@@ -74,11 +74,11 @@ export default function FetchPage() {
     }
 
     return (
-        <div>
+        <div className="content-container">
             <h1>Fetch</h1>
-            <p>Click the button below to fetch data from the server</p>
+            <p>Click the button below to fetch the users from the server</p>
             <button onClick = {handleSubmit} 
-                    disabled = {(error != null) || (isInternalFetched && !isEmpty(internalUsers))}>Fetch</button>
+                    disabled = {error != null}>Fetch</button>
             {content}
         </div>
     )

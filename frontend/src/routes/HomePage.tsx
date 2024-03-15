@@ -43,8 +43,8 @@ export default function HomePage() {
       );
     } else {
       content = (
-        <div className="user-table">
-          <table>
+        <div>
+          <table className="table-container">
             <thead>
               <tr>
                 <th>id </th>
@@ -74,12 +74,11 @@ export default function HomePage() {
    
 
   return (
-    <div className="HomePage">
-      <header className="HomePage-header">
+    <div className="content-container">
         <h1>Welcome Home!</h1>
+        <p>Click the button to fetch the users from the external source.</p>
         <button onClick={handleSubmit} disabled={isExternalFetched || (error != null)}>Download Users</button>
         {content}
-      </header>
     </div>
   );
 }

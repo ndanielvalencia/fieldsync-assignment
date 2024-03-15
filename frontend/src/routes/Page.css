@@ -12,3 +12,36 @@
   border: 1px solid #66ff66;
   border-radius: 4px; 
 }
+
+.table-container {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table-container th {
+  background-color: #f2f2f2;
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table-container td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+.table-container tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table-container tr:hover {
+  background-color: #dddddd;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
